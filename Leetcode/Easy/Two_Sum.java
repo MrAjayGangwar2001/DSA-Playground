@@ -9,6 +9,18 @@ public class Two_Sum {
         int[] nums = { 2, 7, 11, 15 };
         int target = 26;
 
+        // Method 1 Brute force Method 
+
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i+1; j < nums.length; j++) {
+                if (nums[i] + nums[j] == target) {
+                    System.out.println("Match Found !");
+                    System.out.println("The Indexes is : " +i + "," + j);
+                }
+            }
+        }
+        // Method 2 Optimized Method with Hashcode
+        /* 
         Map<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
@@ -20,12 +32,9 @@ public class Two_Sum {
             }
             map.put(nums[i], i);
         }
+             */
 
-        // for (int i : nums) {
-        // System.out.print(i + " ");
-        // }
-        System.out.println(map.values());
-        System.out.println(map);
+        
 
     }
 }

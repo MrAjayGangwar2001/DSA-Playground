@@ -11,6 +11,7 @@ public class Two_Sum {
 
         // Method 1 Brute force Method 
 
+        /*
         for (int i = 0; i < nums.length; i++) {
             for (int j = i+1; j < nums.length; j++) {
                 if (nums[i] + nums[j] == target) {
@@ -19,8 +20,9 @@ public class Two_Sum {
                 }
             }
         }
+             */
         // Method 2 Optimized Method with Hashcode
-        /* 
+        
         Map<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
@@ -32,7 +34,7 @@ public class Two_Sum {
             }
             map.put(nums[i], i);
         }
-             */
+        
 
         
 

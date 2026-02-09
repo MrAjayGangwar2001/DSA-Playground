@@ -18,7 +18,20 @@ class Problem {
 
     }
 
-    
+    public int Method_2(int prices[]){
+
+        int BuyPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+
+        for (int price : prices) {
+            if (price < BuyPrice) {
+                BuyPrice = price;
+            } else {
+                maxProfit = Math.max(maxProfit, price - BuyPrice);
+            }
+        }
+        return maxProfit;
+    }
 }
 
 public class Time_to_buy_Sell_Stock_121 {
@@ -26,8 +39,8 @@ public class Time_to_buy_Sell_Stock_121 {
 
         int prices[] = {7, 1, 5, 3, 6, 4};
         Problem pl = new Problem();
-        System.out.println(pl.Method_1(prices));
-        
+        // System.out.println(pl.Method_1(prices));
+        System.out.println(pl.Method_2(prices));
 
     }
 }

@@ -34,7 +34,18 @@ class Solution {
         return false;
     }
 
-    
+    // METHOD 3 BY USING SET
+    public boolean method_3(int[] nums) {
+
+        Set<Integer> st = new HashSet<>();
+
+        for (int arr : nums) {
+            if (!st.add(arr)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
 
 public class Contains_Duplicate_217 {
@@ -48,8 +59,9 @@ public class Contains_Duplicate_217 {
 
 
         // s.containsDuplicate(nums);
-        System.out.println(s.method_1(nums));
-        
+        // System.out.println(s.method_1(nums));
+        // System.out.println(s.method_2(nums));
+        System.out.println(s.method_3(nums));
 
     }
 }

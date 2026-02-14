@@ -4,7 +4,7 @@ import java.util.*;
 
 class Solution {
 
-    // Method 1 with brute force but it will not a valid solution
+    // Method 1 with brute force but it will not be a valid solution
     public boolean method_1(int[] nums) {
 
         for (int i = 0; i < nums.length; i++) {

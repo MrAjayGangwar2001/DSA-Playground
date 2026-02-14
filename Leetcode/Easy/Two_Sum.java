@@ -10,7 +10,8 @@ public class Two_Sum {
         int target = 26;
 
         // Method 1 Brute force Method 
-
+        // Time: O(n²)
+        // Space: O(1)
         /*
         for (int i = 0; i < nums.length; i++) {
             for (int j = i+1; j < nums.length; j++) {
@@ -22,7 +23,8 @@ public class Two_Sum {
         }
              */
         // Method 2 Optimized Method with Hashcode
-        
+        // Time: O(n)
+        // Space: O(n)
         Map<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {

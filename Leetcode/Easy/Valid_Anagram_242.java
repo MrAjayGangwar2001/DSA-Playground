@@ -4,7 +4,7 @@ import java.util.Arrays;
 class Angrm {
 
     // Method 1 : Time Complexity O(n log n)
-    public boolean check() {
+    public boolean Method_1() {
 
         // String s = "arc";
         // String t = "car";
@@ -36,7 +36,7 @@ class Angrm {
 public class Valid_Anagram_242 {
     public static void main(String[] args) {
         Angrm ag = new Angrm();
-        System.out.println(ag.check());
+        System.out.println(ag.Method_1());
 
     }
 }

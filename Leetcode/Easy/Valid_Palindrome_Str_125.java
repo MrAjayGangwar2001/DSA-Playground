@@ -28,7 +28,7 @@ class Palindrome{
 
     }
 
-
+    // Method 2 :- Time O(n) and Space O(1)
     public boolean Method_2(){
 
         int left = 0;

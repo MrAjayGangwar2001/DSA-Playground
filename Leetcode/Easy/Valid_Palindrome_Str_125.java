@@ -5,7 +5,7 @@ class Palindrome{
         // String s = "race a car";
         String s = "A man, a plan, a canal: Panama";
 
-        String clean = s.replaceAll("[!@#$%^&*()_:,.]", "").toLowerCase();
+        String clean = s.replaceAll("[!@#$%^&*()_:,.<>?/\\|\"]", "").toLowerCase();
         String str = clean.replaceAll(" ", "");
         StringBuilder sb = new StringBuilder(str);
         String rev = sb.reverse().toString();

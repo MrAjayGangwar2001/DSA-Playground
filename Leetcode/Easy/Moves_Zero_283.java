@@ -34,29 +34,29 @@ public class Moves_Zero_283 {
         int idx = 0;
 
         for (int num : arr) {
-        if (num != 0) {
-        arr[idx++] = num;
-        }
+            if (num != 0) {
+                arr[idx++] = num;
+            }
 
         }
 
         while (idx < arr.length) {
-        arr[idx++] = 0;
+            arr[idx++] = 0;
         }
 
         // Method 3 : Swapping....
         // Same Time & Space Complexity ==> O(n) & O(1)
         /*
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] != 0) {
-                int temp = arr[i];
-                arr[i] = arr[idx];
-                arr[idx] = temp;
-
-                idx++;
-            }
-        }
-        */
+         * for (int i = 0; i < arr.length; i++) {
+         * if (arr[i] != 0) {
+         * int temp = arr[i];
+         * arr[i] = arr[idx];
+         * arr[idx] = temp;
+         * 
+         * idx++;
+         * }
+         * }
+         */
 
         // Printing Final Output/Array
         for (int nums : arr) {

@@ -1,6 +1,13 @@
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class ArrayConcat_1929 {
 
     static public int[] getConcatenation(int[] nums) {
+        int len = nums.length;
+        int arr[] = new int[2 * len];
 
         // Method 1 Using List
 
@@ -8,9 +15,10 @@ public class ArrayConcat_1929 {
         .boxed()
         .collect(Collectors.toList());
 
-        for(int arr : nums){
-        ls.add(arr);
+        for(int ar : nums){
+        ls.add(ar);
         }
+
 
         return arr;
 

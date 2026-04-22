@@ -19,14 +19,33 @@ public class ArrayConcat_1929 {
         
         // Method 2 Using for lopp and Stream API
 
-        for(int i =0; i<len; i++){
-        arr[i] = nums[i];
-        arr[i + len] = nums[i];
-        }
+        // for(int i =0; i<len; i++){
+        // arr[i] = nums[i];
+        // arr[i + len] = nums[i];
+        // }
 
-        return ls.stream().mapToInt(x -> x).toArray();
+        // return ls.stream().mapToInt(x -> x).toArray();
+
+        // Method 3 Using Nested for loop but it is worst case and Exceed time limit
+
+        // int len = nums.length;
+        // int arr[] = new int[len];
 
         
+        int i = 0;
+        for (int k = 1; k <= 2; k++) {
+            // while (i < arr.length) {
+                for (int j = 0; j < nums.length; j++) {
+                    arr[i] = nums[j];
+                    i++;
+                }
+
+            // }
+        }
+
+        // Method 4 Optimized and Efficient
+        // System.arraycopy(nums, 0, arr, 0, len);
+        // System.arraycopy(nums, 0, arr, len, len);
 
 
 

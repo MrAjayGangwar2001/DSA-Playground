@@ -1,7 +1,4 @@
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class ArrayConcat_1929 {
 
@@ -11,13 +8,26 @@ public class ArrayConcat_1929 {
 
         // Method 1 Using List
 
-        List<Integer> ls = Arrays.stream(nums)
-        .boxed()
-        .collect(Collectors.toList());
+        // List<Integer> ls = Arrays.stream(nums)
+        // .boxed()
+        // .collect(Collectors.toList());
 
-        for(int ar : nums){
-        ls.add(ar);
+        // for(int ar : nums){
+        // ls.add(ar);
+        // }
+
+        
+        // Method 2 Using for lopp and Stream API
+
+        for(int i =0; i<len; i++){
+        arr[i] = nums[i];
+        arr[i + len] = nums[i];
         }
+
+        return ls.stream().mapToInt(x -> x).toArray();
+
+        
+
 
 
         return arr;

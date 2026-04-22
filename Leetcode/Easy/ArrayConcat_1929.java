@@ -32,20 +32,20 @@ public class ArrayConcat_1929 {
         // int arr[] = new int[len];
 
         
-        int i = 0;
-        for (int k = 1; k <= 2; k++) {
-            // while (i < arr.length) {
-                for (int j = 0; j < nums.length; j++) {
-                    arr[i] = nums[j];
-                    i++;
-                }
+        // int i = 0;
+        // for (int k = 1; k <= 2; k++) {
+        //     // while (i < arr.length) {
+        //         for (int j = 0; j < nums.length; j++) {
+        //             arr[i] = nums[j];
+        //             i++;
+        //         }
 
-            // }
-        }
+        //     // }
+        // }
 
         // Method 4 Optimized and Efficient
-        // System.arraycopy(nums, 0, arr, 0, len);
-        // System.arraycopy(nums, 0, arr, len, len);
+        System.arraycopy(nums, 0, arr, 0, len);
+        System.arraycopy(nums, 0, arr, len, len);
 
 
 

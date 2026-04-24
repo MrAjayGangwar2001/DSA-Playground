@@ -9,13 +9,23 @@ public class FindWordContainChar_2942 {
 
         // -------------- Method 1 Bruteforce Approach but still it works in 2ms------
 
-        for (int i = 0; i < words.length; i++) {
+        // for (int i = 0; i < words.length; i++) {
 
-            for (char ch : words[i].toCharArray()) {
-                if (ch == chr) {
-                    ls.add(i);
-                    break;
-                }
+        //     for (char ch : words[i].toCharArray()) {
+        //         if (ch == chr) {
+        //             ls.add(i);
+        //             break;
+        //         }
+        //     }
+        // }
+
+         // Method 2 =============>>>>> optimized and Efficient Approach ------ 1ms
+        // ------
+
+        for (int i = 0; i < words.length; i++) {
+            if (words[i].indexOf(chr) != -1) { // takes 1 ms run time
+                // if(words[i].contains(String.valueOf(chr))){ // takes 2ms Run time
+                ls.add(i);
             }
         }
 

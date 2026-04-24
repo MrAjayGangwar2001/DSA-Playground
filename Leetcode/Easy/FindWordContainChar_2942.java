@@ -29,6 +29,14 @@ public class FindWordContainChar_2942 {
             }
         }
 
+        
+        // Method 3 Using Stream API. It is Very Slow and Took 8 ms run time
+
+        // List<Integer> ls = IntStream.range(0, words.length)
+        // .filter(i -> words[i].indexOf(chr) != -1)
+        // .boxed()
+        // .collect(Collectors.toList());
+
         return ls;
     }
 

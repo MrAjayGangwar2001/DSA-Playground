@@ -21,7 +21,15 @@ public class ComputeAlternativeSum_3701 {
             sum += nums[len-1];
         }
 
-        
+        // Another Method ---
+
+        // int sign = 1;
+
+        // for(int arr : nums){
+        //     sum += sign * arr;
+
+        //     sign *= -1;
+        // }
 
         return sum;
     }

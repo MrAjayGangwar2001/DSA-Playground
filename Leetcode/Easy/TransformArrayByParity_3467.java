@@ -10,18 +10,33 @@ public class TransformArrayByParity_3467 {
 
         int len = nums.length;
 
+        // for (int i = 0; i < len; i++) {
+        // if (nums[i] % 2 == 0) {
+        // nums[i] = 0;
+        // }else{
+        // nums[i] = 1;
+        // }
+        // }
+
+        // Arrays.sort();
+        // return nums;
+        
+        // Method 2 Optimized and Efficient
+
+        int left = 0;
+        int right = len - 1;
+
+        int array[] = new int[len];
+
         for (int i = 0; i < len; i++) {
-        if (nums[i] % 2 == 0) {
-        nums[i] = 0;
-        }else{
-        nums[i] = 1;
-        }
+            if (nums[i] % 2 == 0) {
+                array[left++] = 0;
+            } else {
+                array[right--] = 1;
+            }
         }
 
-        Arrays.sort();
-        return nums;
-        
-        
+        return array;
     }
 
     public static void main(String[] args) {

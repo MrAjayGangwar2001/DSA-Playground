@@ -1,8 +1,5 @@
 package Leetcode.Easy;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class NumOfGoodPairs_1512 {
 
     static int GoodPairs(int[] nums){
@@ -10,7 +7,7 @@ public class NumOfGoodPairs_1512 {
         int len = nums.length;
         int pairs = 0;
 
-        
+        // Method 1 Basic and Brute force and took 2 ms Runtime
 
         for (int i = 0; i < len; i++) {
             

@@ -32,8 +32,9 @@ public class ShuffleArray_1470 {
     }
 
     static void main() {
-       int[] testCase = {2, 5, 1, 3, 4, 7};
-        
+//        int[] testCase = {2, 5, 1, 3, 4, 7};
+        int[] testCase = {1, 2, 3, 4, 4, 3, 2, 1};
+//        int [] testCase = {1,1,2,2};
 
         int[]  result = Shuffle(testCase, 4);
 

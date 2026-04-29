@@ -8,7 +8,7 @@ public class ShuffleArray_1470 {
         int[] result = new int[len];
 
     // Basic Bruteforce Method/Approach
-        
+        /*
         int[] X = new int[n];
         int [] Y = new int[n];
 
@@ -23,10 +23,15 @@ public class ShuffleArray_1470 {
             result[j+1] = Y[idx];
             idx++;
         }
-        
+        */
 
 
-    
+    // Simple and Optimized Approach
+
+        for (int i = 0; i < n; i++) {
+            result[2 * i] = nums[i];
+            result[2 * i + 1] = nums[n + i];
+        }
 
         return result;
     }

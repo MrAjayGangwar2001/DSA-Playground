@@ -28,10 +28,14 @@ public class RichestCustomerWealth_1672{
     public static void main(String[] args) {
 
         int [][] accounts = {{1, 2, 3}, {3, 2, 1}};
-        
+        int [][] TestCase = {{1, 5}, {7, 3}, {3, 5}};
+        int [][] TestCase2 = {{2, 8, 7}, {7, 1, 3}, {1, 9, 5}};
         int result = MaximumWealth(accounts);
-        
+        int result2 = MaximumWealth(TestCase);
+        int result3 = MaximumWealth(TestCase2);
+
         System.out.println(result);
-        
+        System.out.println(result2);
+        System.out.println(result3);
     }
 }

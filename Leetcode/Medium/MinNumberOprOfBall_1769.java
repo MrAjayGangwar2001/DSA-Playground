@@ -8,17 +8,45 @@ public class MinNumberOprOfBall_1769 {
 
         // Brute force Method took 129 ms Runtime
 
+        // for (int i = 0; i < len; i++) {
+
+        // int count = 0;
+        // for (int j = 0; j < len; j++) {
+
+        // if (boxes.charAt(j) == '1') {
+        // count += Math.abs(i -j);
+        // }
+        // }
+
+        // arr[i] = count;
+        // }
+
+        // OPTIMIZED BUT TOOK 3ms RUNTIME
+        // From left to Right check
+
+        int count = 0;
+        int cost = 0;
         for (int i = 0; i < len; i++) {
-
-            int count = 0;
-            for (int j = 0; j < len; j++) {
-
-                if (boxes.charAt(j) == '1') {
-                    count += Math.abs(i - j);
-                }
+            arr[i] += cost;
+            if (boxes.charAt(i) == '1') {
+                count++;
             }
+            cost += count;
+        }
 
-            arr[i] = count;
+        // From Right to left
+
+        cost = 0;
+        count = 0;
+
+        for (int j = len - 1; j >= 0; j--) {
+            arr[j] += cost;
+
+            if (boxes.charAt(j) == '1') {
+                count++;
+
+            }
+            cost += count;
         }
 
         return arr;

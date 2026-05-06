@@ -36,6 +36,27 @@ public class PartitionArrayGivenPivot_2161{
         }
         
 
+        // for(int i = 0; i < nums.length; i++){
+
+        //     if(nums[i] < pivot){
+        //         arr[idx++] = nums[i];
+        //     }
+        // }
+
+        // for(int j = 0; j < nums.length; j++){
+
+        //     if(nums[j] == pivot){
+        //         arr[idx++] = nums[j];
+
+        //     }
+        // }
+
+        // for(int k = 0; k < nums.length; k++){
+
+        //     if(nums[k] > pivot){
+        //         arr[idx++] = nums[k];
+        //     }
+        // }
 
         return arr;
         

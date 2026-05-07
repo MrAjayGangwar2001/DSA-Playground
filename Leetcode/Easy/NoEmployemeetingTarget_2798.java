@@ -25,7 +25,7 @@ public class NoEmployemeetingTarget_2798{
         int target2= 6;
 
         int result = NoOfEmployeWhoMetTarget(hours, target);
-        int result2 = NoOfEmployeWhoMetTarget(hours, target2);
+        int result2 = NoOfEmployeWhoMetTarget(hours2, target2);
 
         System.out.println(result);
         System.out.println(result2);

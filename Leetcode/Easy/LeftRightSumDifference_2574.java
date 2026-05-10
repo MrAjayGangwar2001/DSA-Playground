@@ -44,7 +44,20 @@ public class LeftRightSumDifference_2574 {
             arr[k] = total;
         }
 
-    
+    // Another Method------------
+        // for(int num : nums){
+        // sum += num;
+        // }
+
+        // int leftSum = 0;
+
+        // for(int i = 0; i < len; i++){
+        // sum -= nums[i];
+
+        // arr[i] = Math.abs(leftSum - sum);
+
+        // leftSum += nums[i];
+        // }
 
         return arr;
     }

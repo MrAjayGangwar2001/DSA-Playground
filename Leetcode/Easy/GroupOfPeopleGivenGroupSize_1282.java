@@ -23,10 +23,13 @@ public class GroupOfPeopleGivenGroupSize_1282 {
 
             mp.putIfAbsent(size, new ArrayList<>());
 
-            mp.get(size).add(i);
+            List<Integer> group = mp.get(size);
+            group.add(i);
 
-                
-                if(mp.get(size).size() == size){
+            // mp.get(size).add(i);
+
+                if(group.size() == size){
+                // if(mp.get(size).size() == size){
                    
                     ls.add(new ArrayList<>(mp.get(size)));
 

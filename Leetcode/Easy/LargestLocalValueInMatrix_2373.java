@@ -15,7 +15,9 @@ public class LargestLocalValueInMatrix_2373 {
 
                 for (int x = i; x < i + 3; x++) {
                     for (int y = j; y < j + 3; y++) {
-                       
+                        if (grid[x][y] > max) {
+                            max = grid[x][y];
+                        }
                         max = Math.max(max, grid[x][y]);
                     }
                 }

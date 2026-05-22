@@ -33,9 +33,10 @@ public class CountPairWhoseLessThanTarget_2824{
 
     public static void main(String[] args) {
 
-        List<Integer> nums = new ArrayList<>(List.of(-1,1,2,3,1));
-        int target = 2;
-        
+        // List<Integer> nums = new ArrayList<>(List.of(-1,1,2,3,1));
+        // int target = 2;
+        List<Integer> nums = new ArrayList<>(List.of(-6,2,5,-2,-7,-1,3));
+        int target = -2;
         int result = CountPair(nums, target);
 
         System.out.println(result);

@@ -8,7 +8,13 @@ class LongestSubstringWithoutRepeatingChar_3 {
 
         Map<Character, Integer> mp = new HashMap<>();
 
-    /
+    // Here Sliding Window Technique will be work....
+    // WINDOW SIZE ==> right - left + 1
+    //  1. Move Forward
+    //  2. Process Window Data
+    //  3. Shrink/Expand window if Required
+    //  window ===>  [ left..........right ]
+        
 
         int length = 0;
         int left = 0;
@@ -23,7 +29,7 @@ class LongestSubstringWithoutRepeatingChar_3 {
             mp.put(ch, right);
 
             length = Math.max(length, right - left + 1);
-            
+            // System.out.println("map.get method " +mp.get(ch));
         }
 
         return length;

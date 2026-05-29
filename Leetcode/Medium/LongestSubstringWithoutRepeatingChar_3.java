@@ -31,8 +31,9 @@ class LongestSubstringWithoutRepeatingChar_3 {
     }
 
     public static void main(String[] args) {
-        int result = lengthOfLongestSubstring("abcabcbb");
-        
+        // int result = lengthOfLongestSubstring("abcabcbb");
+        // int result = lengthOfLongestSubstring("bbbbbb");
+        int result = lengthOfLongestSubstring("bbaacc");
         System.out.println(result);
     }
 }

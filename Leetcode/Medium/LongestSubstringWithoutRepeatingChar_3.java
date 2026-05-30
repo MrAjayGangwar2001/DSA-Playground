@@ -1,5 +1,10 @@
 package Leetcode.Medium;
 
+// WINDOW SIZE ==> right - left + 1
+//  1. Move Forward
+//  2. Process Window Data
+//  3. Shrink/Expand window if Required
+//  window ===>  [ left..........right ]
 
 class LongestSubstringWithoutRepeatingChar_3 {
     public static int lengthOfLongestSubstring(String s) {

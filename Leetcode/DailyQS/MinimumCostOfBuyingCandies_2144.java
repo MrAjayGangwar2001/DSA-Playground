@@ -29,7 +29,10 @@ public class MinimumCostOfBuyingCandies_2144 {
     }
 
     public static void main(String[] args) {
-        int[] cost = { 6, 5, 7, 9, 2, 2 };
+        // int[] cost = { 6, 5, 7, 9, 2, 2 };
+        // int[] cost = {3, 3, 3, 1};
+        // int[] cost = {1, 2, 3};
+        int[] cost = { 5, 5 };
 
         int result = MinCostBuyCandy(cost);
         System.out.println(result);

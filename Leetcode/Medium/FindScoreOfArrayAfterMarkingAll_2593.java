@@ -48,8 +48,9 @@ public class FindScoreOfArrayAfterMarkingAll_2593 {
         // input = { 4, 1, 6, 2, 3, 5 };
         // output = 1 + 2 + 5 = 8
 
-        int[] nums = { 4, 1, 6, 2, 3, 5 };
-       
+        // int[] nums = { 4, 1, 6, 2, 3, 5 };
+        // int[] nums = { 2, 1, 3, 4, 5, 2 };  // 7
+        int[] nums = { 2, 3, 5, 1, 3, 2 };  // 5
 
         long result = FindScore(nums);
 

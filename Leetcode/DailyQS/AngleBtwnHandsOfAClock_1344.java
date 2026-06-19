@@ -12,7 +12,12 @@ public class AngleBtwnHandsOfAClock_1344 {
         return Math.min(angle, 360.0 - angle);
 
 
-       
+        // double minAngle = minutes * 6.0;
+        // double hourAngle = (hour % 12) * 30.0 + minutes * 0.5;
+
+        // double angle = Math.abs(hourAngle - minAngle);
+
+        // return Math.min(angle, 360.0 - angle);
 
 
         
@@ -23,7 +28,7 @@ public class AngleBtwnHandsOfAClock_1344 {
 
         // int hours = 12;
         // int minutes = 30;
-
+        
         // int hours = 3;
         // int minutes = 30;
 

@@ -20,17 +20,30 @@ public class Maximum_IceCreamBars_1833 {
 
         int count = 0;
 
-        for (int i = 1; i <= max; i++){
+        // for (int i = 1; i <= max; i++){
 
-        while (nums[i] > 0 && coins >= i) {
-        nums[i]--;
+        // while (nums[i] > 0 && coins >= i) {
+        // nums[i]--;
 
-        coins -= i;
+        // coins -= i;
 
-        count++;
+        // count++;
+        // }
+        // }
+
+// More Optimised-----
+
+        for (int cost = 1; cost <= max; cost++) {
+
+            if (nums[cost] == 0) {
+                continue;
+            }
+
+            int canBuy = Math.min(nums[cost], coins / cost);
+
+            count += canBuy;
+            coins -= canBuy * cost;
         }
-        }
-
 
         return count;
     }

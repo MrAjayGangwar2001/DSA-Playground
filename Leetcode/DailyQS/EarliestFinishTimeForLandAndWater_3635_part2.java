@@ -1,4 +1,4 @@
-
+package Leetcode.DailyQS;
 import java.util.Arrays;
 
 public class EarliestFinishTimeForLandAndWater_3635_part2 {

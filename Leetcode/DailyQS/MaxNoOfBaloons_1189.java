@@ -11,8 +11,8 @@ public class MaxNoOfBaloons_1189 {
         // String str = "leetcode";
         String str = "loonbalxballpoon";
 
-        int Result = MaxBaloons(str);
-        
+        // int Result = MaxBaloons(str);
+        int Result = MaxOptimize(str);
 
         System.out.println("Result : " + Result);
     }
@@ -49,6 +49,22 @@ public class MaxNoOfBaloons_1189 {
 
     }
 
-    
+    private static int MaxOptimize(String str) {
+
+        int[] freq = new int[26];
+
+        for (char ch : str.toCharArray()) {
+            freq[ch - 'a']++;
+        }
+
+        int Result = Math.min(
+                Math.min(freq['b' - 'a'], freq['a' - 'a']),
+                Math.min(Math.min(freq['l' - 'a'] / 2, freq['o' - 'a'] / 2), freq['n' - 'a'])
+
+        );
+
+        return Result;
+
+    }
 
 }

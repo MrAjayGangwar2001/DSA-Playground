@@ -46,12 +46,74 @@ public class ProcessStringWithSpecialOpr_3614 {
         }
     }
 
-   
+    public static char HardLevelMethod() {
+
+        // String s = "cd%#*#";
+        // long k = 3;
+
+        String s = "a#b%*";
+        long k = 1;
+
+        long[] len = new long[s.length()];
+
+        long currLen = 0;
+        for (int i = 0; i < s.length(); i++) {
+
+            char ch = s.charAt(i);
+
+            if (ch >= 'a' && ch <= 'z') {
+                currLen++;
+            } else if (ch == '*') {
+                if (currLen > 0) {
+                    currLen--;
+                }
+            } else if (ch == '#') {
+                // currLen *= 2;
+
+                currLen = Math.min(currLen * 2, (long)1e18);
+            }
+
+            len[i] = currLen;
+        }
+
+        // k--;   if k indexing 1 based
+
+        if (k >= currLen) {
+            return '.';
+        }
+
+        for (int j = s.length() - 1; j >= 0; j--) {
+
+            long prevLen = (j == 0) ? 0 : len[j - 1];
+
+            char ch = s.charAt(j);
+
+            if (ch >= 'a' && ch <= 'z') {
+
+                if (k == prevLen) {
+                    return ch;
+                }
+            } else if (ch == '#') {
+                if(prevLen > 0){
+                    k = k % prevLen;
+                }
+            } else if (ch == '%') {
+                k = prevLen - 1 - k;
+            } else if (ch == '*') {
+                // k unchanged
+            }
+
+        }
+
+        return '.';
+    }
 
     public static void main(String[] args) {
 
+        char ch = HardLevelMethod();
         MediumLevelMethod();
 
+        System.out.println("Result : "+ch);
     }
 
 }

@@ -1,7 +1,5 @@
 package Leetcode.DailyQS;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class CountSubArrayWithMajorityElement_3737_1 {
 
@@ -19,26 +17,28 @@ public class CountSubArrayWithMajorityElement_3737_1 {
     private static int CountSubArray(int[] nums, int target) {
 
        
-        if (nums.length == 1 && nums[0] == target) {
+        // if (nums.length == 1 && nums[0] == target) {
 
-            // System.out.println("Element not found : "+ target );
-            return 1;
-        }
+        //     // System.out.println("Element not found : "+ target );
+        //     return 1;
+        // }
 
+        int len = nums.length;
         int idx = 0;
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < len; i++) {
 
             int count = 0;
 
-            for (int j = i; j < nums.length; j++) {
+            for (int j = i; j < len; j++) {
 
                 if (nums[j] == target) {
                     count++;
                 }
 
-                int len = j - i + 1;
+                int length = j - i + 1;
 
-                if (count > len / 2) {
+                // if (count > len / 2) {
+                if (2 * count > length) {
                     idx++;
                 }
             }

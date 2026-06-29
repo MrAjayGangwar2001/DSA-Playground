@@ -23,15 +23,17 @@ public class NoOfStringAppearAsSubstringInWord_1967 {
 
         for(String s : pattern){
 
-            boolean check = word.contains(s);
+            // boolean check = word.contains(s);
 
-            if (check) {
+            // if (check) {
+            if (word.contains(s)) {
                 count++;
             }
 
 
             
         }
+        
         return count;
     }
 }

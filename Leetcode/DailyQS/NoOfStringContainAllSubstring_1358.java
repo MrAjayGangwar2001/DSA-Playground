@@ -17,8 +17,8 @@ public class NoOfStringContainAllSubstring_1358 {
 
         int len = str.length();
 
-    //  Basic Bruteforce Approach but return TLE Error with O(n^2/ n^3)
-    /*
+        // Basic Bruteforce Approach but return TLE Error with O(n^2/ n^3)
+        /*
          * int count = 0;
          * for (int i = 0; i < str.length(); i++) {
          * 
@@ -41,27 +41,47 @@ public class NoOfStringContainAllSubstring_1358 {
          * }
          */
 
+//   Another Method with different Approach but same O(n^2)
+
+        // int count = 0;
+        // for (int i = 0; i < len; i++) {
+
+        // boolean hasA = false;
+        // boolean hasB = false;
+        // boolean hasC = false;
+        // for (int j = i; j < len; j++) {
+
+        // char ch = str.charAt(j);
+
+        // if (ch == 'a')
+        // hasA = true;
+        // else if (ch == 'b')
+        // hasB = true;
+        // else if (ch == 'c')
+        // hasC = true;
+
+        // if (hasA && hasB && hasC) {
+        // count += len - j;
+        // break;
+        // }
+        // }
+        // }
+
+
         int count = 0;
+        StringBuilder sb = new StringBuilder();
+
+        int idx = 0;
         for (int i = 0; i < len; i++) {
 
-            boolean hasA = false;
-            boolean hasB = false;
-            boolean hasC = false;
-            for (int j = i; j < len; j++) {
+            char ch = str.charAt(i);
 
-                char ch = str.charAt(j);
+            String s = String.valueOf(sb.append(ch));
 
-                if (ch == 'a')
-                    hasA = true;
-                else if (ch == 'b')
-                    hasB = true;
-                else if (ch == 'c')
-                    hasC = true;
+            if (s.contains("a") && s.contains("b") && s.contains("c")) {
+                idx = i;
+                count += len - idx;
 
-                if (hasA && hasB && hasC) {
-                    count += len - j;
-                    break;
-                }
             }
         }
 

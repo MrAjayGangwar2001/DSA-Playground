@@ -16,10 +16,10 @@ public class NoOfStringContainAllSubstring_1358 {
     private static int CountNoOfSubstring(String str) {
 
         int len = str.length();
+        int count = 0;
 
         // Basic Bruteforce Approach but return TLE Error with O(n^2/ n^3)
         /*
-         * int count = 0;
          * for (int i = 0; i < str.length(); i++) {
          * 
          * StringBuilder sb = new StringBuilder();
@@ -43,7 +43,6 @@ public class NoOfStringContainAllSubstring_1358 {
 
 //   Another Method with different Approach but same O(n^2)
 
-        // int count = 0;
         // for (int i = 0; i < len; i++) {
 
         // boolean hasA = false;
@@ -67,21 +66,38 @@ public class NoOfStringContainAllSubstring_1358 {
         // }
         // }
 
+// Another Method for small test cases but Again TLE for these constraint
 
-        int count = 0;
-        StringBuilder sb = new StringBuilder();
+        // StringBuilder sb = new StringBuilder();
 
-        int idx = 0;
-        for (int i = 0; i < len; i++) {
+        // int idx = 0;
+        // for (int i = 0; i < len; i++) {
 
-            char ch = str.charAt(i);
+        //     char ch = str.charAt(i);
 
-            String s = String.valueOf(sb.append(ch));
+        //     String s = String.valueOf(sb.append(ch));
 
-            if (s.contains("a") && s.contains("b") && s.contains("c")) {
-                idx = i;
-                count += len - idx;
+        //     if (s.contains("a") && s.contains("b") && s.contains("c")) {
+        //         idx = i;
+        //         count += len - idx;
 
+        //     }
+        // }
+
+ // Final and Optimised Sliding window Approach with O(n)
+
+        int[] freq = new int[3];
+
+        int left = 0;
+        for (int right = 0; right < len; right++) {
+
+            freq[str.charAt(right) - 'a']++;
+
+            while (freq[0] > 0 && freq[1] > 0 && freq[2] > 0) {
+
+                count += len - right;
+                freq[str.charAt(left) - 'a']--;
+                left++;
             }
         }
 

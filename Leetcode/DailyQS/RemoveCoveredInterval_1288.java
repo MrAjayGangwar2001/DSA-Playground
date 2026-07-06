@@ -36,12 +36,16 @@ public class RemoveCoveredInterval_1288 {
 
     public static void main(String[] args) {
 
-        int[][] intervals = {    
+        // int[][] intervals = {    
+        //     {1, 4},
+        //     {3, 6},
+        //     {2, 8}
+        // };                  // 2
+        int[][] intervals = {
             {1, 4},
-            {3, 6},
-            {2, 8}
-        };                  // 2
-       
+            {2, 3}
+        };            // 1
+        
         int result = RemainingIntervals(intervals);
 
         System.out.println("Result : "+result);

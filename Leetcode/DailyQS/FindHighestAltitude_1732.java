@@ -29,7 +29,8 @@ public class FindHighestAltitude_1732 {
     public static void main(String[] args) {
 
         int[] gain = { -5, 1, 5, 0, -7 };
-        
+        // int[] gain = {-4,-3,-2,-1,4,3,2};
+        // int[] gain = {-4,-3,-2,-1,4,3,2, 1, -1};
 
         int Result = FindHighest(gain);
 

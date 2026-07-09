@@ -6,11 +6,14 @@ import javax.sound.sampled.SourceDataLine;
 public class PathExistanceQueriesInGraph_3532 {
 
     public static void main(String[] args) {
-        
-        int n = 2;
-        int[] nums = { 1, 3 };
-        int maxDiff = 1;
-        int[][] queries = { {0,0}, {0,1} };
+        int n = 4;
+        int[] nums = { 2, 5, 6, 8 };
+        int maxDiff = 2;
+        int[][] queries = { {0, 1}, {0, 2}, {1, 3}, {2, 3} };
+        // int n = 2;
+        // int[] nums = { 1, 3 };
+        // int maxDiff = 1;
+        // int[][] queries = { {0,0}, {0,1} };
 
 
         boolean[] result = PathExistance(n, nums, maxDiff, queries);

@@ -29,16 +29,18 @@ public class SequentialDigits_1291 {
         while (L <= H) {
             for (int i = 0; i + L <= 9; i++) {
                
-                String str = "";
+                // String str = "";
+                StringBuilder sb = new StringBuilder();
                 for (int j = i; j < i + L; j++) {
 
                     char c = max.charAt(j);
 
-                    str = str + String.valueOf(c);
+                    // str = str + String.valueOf(c);
+                    sb.append(c);
 
                 }
                
-                int num = Integer.parseInt(str);
+                int num = Integer.parseInt(sb.toString());
 
                 if (num >= low && num <= high) {
                     result.add(num);

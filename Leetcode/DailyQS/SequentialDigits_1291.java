@@ -1,5 +1,8 @@
 package Leetcode.DailyQS;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SequentialDigits_1291 {
 
     public static void main(String[] args) {
@@ -9,22 +12,19 @@ public class SequentialDigits_1291 {
         // int low = 100;
         // int high = 300;
 
-        int[] ans = SequentialDigits(low, high);
+        List<Integer> ans = SequentialDigits(low, high);
 
-        for (int num : ans) {
-            System.out.print(num + " ");
-        }
+        System.out.println(ans+" ");
     }
 
-    private static int[] SequentialDigits(int low, int high) {
+    private static List<Integer> SequentialDigits(int low, int high) {
 
 
         int L = (String.valueOf(low)).length();
         int H = (String.valueOf(high)).length();
         String max = "123456789";
 
-        int[] result = new int[40];
-        int idx = 0;
+        List<Integer> result = new ArrayList<>();
 
         while (L <= H) {
             for (int i = 0; i + L <= 9; i++) {
@@ -41,7 +41,7 @@ public class SequentialDigits_1291 {
                 int num = Integer.parseInt(str);
 
                 if (num >= low && num <= high) {
-                    result[idx++] = num;
+                    result.add(num);
                 }
 
             }

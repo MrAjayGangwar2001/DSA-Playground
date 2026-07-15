@@ -9,10 +9,23 @@ public class GCDOfOddAndEvenSums_3658 {
         int result = GCDOfOddEven(n);
 
         System.out.println(result);
-        
+        System.out.println(GCDOfOddEvenMethod2(n));
     }
 
-    
+   
+    private static int GCDOfOddEvenMethod2(int n) {
+        // we Already know....
+        // sum of odd N Natural Numbers = n^2
+        // sum of Even N Natural Numbers = n(n + 1)
+
+        int SumEven = n * (n + 1);
+        int SumOdd = n * n;
+
+        // if we find GCD(n * n, n * (n + 1)) = n^2, n^2 + n
+        // so here the remaining is n which is 4 in our case because n^2 is common in both
+
+        return n;
+    }
     private static int GCDOfOddEven(int n) {
         
         // int count = 1;

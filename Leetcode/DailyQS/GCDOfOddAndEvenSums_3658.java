@@ -10,9 +10,49 @@ public class GCDOfOddAndEvenSums_3658 {
 
         System.out.println(result);
         System.out.println(GCDOfOddEvenMethod2(n));
+        System.out.println(GCDOfOddEvenMethod3(n));
     }
 
-   
+    private static int GCDOfOddEvenMethod3(int n) {
+
+        int sumEv = 2;
+        int sumOdd = 1;
+
+        int even = 1;
+        int odd = 1;
+
+
+        // int i = 3;
+        // while (even != n && odd != n) {
+        //     if (i % 2 == 0) {
+        //         sumEv += i;
+        //         even++;
+        //     } else {
+        //         sumOdd += i;
+        //         odd++;
+        //     }
+
+        //     i++;
+        // }
+
+        for(int i = 3; i < 2 * n; i++){
+            if(i % 2 == 0){
+                sumEv += i;
+            }else{
+                sumOdd += i;
+            }
+        }
+
+        while (sumOdd != 0) {
+
+            int temp = sumOdd;
+            sumOdd = sumEv % sumOdd;
+            sumEv = temp;
+        }
+
+        return sumEv;
+
+    }
     private static int GCDOfOddEvenMethod2(int n) {
         // we Already know....
         // sum of odd N Natural Numbers = n^2

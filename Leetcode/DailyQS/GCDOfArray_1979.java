@@ -11,7 +11,7 @@ public class GCDOfArray_1979 {
 
         System.out.println(Result);
 
-       
+        System.out.println(findGCD2(nums));
     }
 
     private static int findGCD(int[] nums) {
@@ -35,5 +35,20 @@ public class GCDOfArray_1979 {
         return low;
     }
 
-   
+    private static int findGCD2(int[] nums) {
+
+        Arrays.sort(nums);
+
+        int low = nums[0];
+        int high = nums[nums.length - 1];
+
+        while(high != 0){
+
+            int temp = high;
+            high = low % high;
+            low = temp;
+        }
+
+        return low;
+    }
 }

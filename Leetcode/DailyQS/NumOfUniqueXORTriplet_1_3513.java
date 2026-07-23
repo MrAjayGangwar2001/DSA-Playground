@@ -15,30 +15,25 @@ public class NumOfUniqueXORTriplet_1_3513 {
         
         int len = nums.length;
 
-        // Set<Integer> st = new HashSet<>();
+        Set<Integer> st = new HashSet<>();
 
-        // for (int i = 0; i < len; i++) {
+        for (int i = 0; i < len; i++) {
             
-        //     for (int j = i; j < len; j++) {
+            for (int j = i; j < len; j++) {
                 
-        //         for (int k = j; k < len; k++) {
+                for (int k = j; k < len; k++) {
                     
-        //             int ans = nums[i] ^ nums[j] ^ nums[k];
+                    int ans = nums[i] ^ nums[j] ^ nums[k];
 
-        //             st.add(ans);
-        //         }
-        //     }
-        // }
+                    st.add(ans);
+                }
+            }
+        }
 
-        // System.out.println(st);
+        System.out.println(st);
 
-        // return st.size();
-// ---------------------------------------------------------------
-    // Optimized Solution
+        return st.size();
 
-        // int bitLen = Integer.toBinaryString(len).length();
-        int bitLen = 32 - Integer.numberOfLeadingZeros(len);
-
-        return 1 << bitLen;
+ 
     }
 }

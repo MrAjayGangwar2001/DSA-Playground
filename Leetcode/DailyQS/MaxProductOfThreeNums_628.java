@@ -10,9 +10,11 @@ public class MaxProductOfThreeNums_628 {
         // int[] arr = { -1, -2, -3, -4 };
         int result1 = MethodBruteForce(arr);
         int result2 = Method2Loop(arr);
+        int result3 = Method3NoLoop(arr);
 
         System.out.println("Result for Brute force Method : " + result1);
         System.out.println("Result for Single Loop Method : " + result2);
+        System.out.println("Result for No Loop Method : " + result3);
 
     }
 
@@ -80,5 +82,19 @@ public class MaxProductOfThreeNums_628 {
 
    
 
-   
+    private static int Method3NoLoop(int[] arr) {
+
+        // Optimised Solution in O(n log n) complexity
+
+        int len = arr.length;
+
+        Arrays.sort(arr);
+
+        int max1 = arr[len - 1] * arr[len - 2] * arr[len - 3];
+        int max2 = arr[0] * arr[1] * arr[len - 1];
+
+        int max = Math.max(max1, max2);
+
+        return max;
+    }
 }

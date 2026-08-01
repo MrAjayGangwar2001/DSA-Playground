@@ -9,7 +9,10 @@ public class MinNoOfMoveToSeatEveryone_2037 {
         
         int[] seats = {12, 14, 19, 19, 12};
         int[] students = {19, 2, 17, 20, 7};    // Ans : 19
-        
+        // int[] seats = {4, 1, 5, 9};
+        // int[] students = {2, 3, 1, 6};    // Ans : 7
+        // int[] seats = {3, 1, 5};
+        // int[] students = {2, 7, 4};   // Ans: 4
 
         int Result = MinMovesForSeat(seats, students);
 

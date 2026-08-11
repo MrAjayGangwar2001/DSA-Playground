@@ -29,9 +29,9 @@ public class SmallestMisingIntegerGreaterSequentialPerfixSum_2996 {
         }
 
         int missing = sum;
-        if (!ls.contains(missing)) {
-            return missing;
-        }
+        // if (!ls.contains(missing)) {
+        //     return missing;
+        // }
 
         while (ls.contains(missing)) {
             
@@ -43,7 +43,8 @@ public class SmallestMisingIntegerGreaterSequentialPerfixSum_2996 {
 
     public static void main(String[] args) {
         
-        int[] nums = {1,2,3,2,5};
+        // int[] nums = {1,2,3,2,5};
+        int[] nums = {3,4,5,1,12,14,13};
 
         int Result = FindSmallestMissingNumber(nums);
 
